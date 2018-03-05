@@ -1,0 +1,525 @@
+Chapter 1 pg 28 -30
+
+<!-- https://github.com/matrixcalculators/matrixcalculators/blob/master/x86/ChaptersReviewAssignments/Chapter1 -->
+
+1. 	The left most bit is the MSB
+
+
+2. 	a. 32+16+4+1 = 53
+   	b. 128+16+4+2 = 150
+  	c. 128+64+8+4 = 204
+
+3.a      1010.1111        175
+       + 1101.1011	+ 219
+     = 1.1000.1010	= 394   
+
+3.b        1001.0111	    151
+         + 1111.1111      + 255
+       = 1.1001.0110      = 406
+
+3.c         0111.0101       117
+          + 1010.1100     + 172
+        = 1.0010.0001     = 289
+
+4.	   0000.1101      13
+        -  0000.0111     - 7
+        =  0000.0110     = 6
+ 
+       or  0000.1101	  13
+        +  1111.1001      -7
+	=  0000.0110    =  6
+
+
+5.a 	16 bits = word = 2 bytes
+
+5.b 	32 bits = doubleword = 4 bytes
+
+5.c 	64 bits = quadword = 8 bytes
+
+5.d 	128 bits = double quadword = 16 bytes
+
+
+6.a     log2(4095).ceiling = 12
+
+	4095/2 = 2047     1
+	2047/2 = 1023     1
+	1023/2 = 511      1
+        511/2  = 255      1
+	255/2  = 127      1
+        127/2  = 63       1
+	63/2   = 31       1
+        31/2   = 15       1
+	15/2   = 7	  1
+        7/2    = 3        1
+        3/2    = 1        1
+        1/2    = 0        1
+
+6.b     log2(65534).ceiling = 16
+
+6.c	log2(42319).ceiling = 16
+
+7.a     0011 0101 1101 1010
+	3    5    d    a
+	35dah
+	
+7.b     1100 1110 1010 0011
+	c    e    a    3
+	cea3
+
+7.c     1111 1110 1101 1011
+	f    e    d    b
+	fedb
+
+8.a     0126f9d4
+        0    1    2    6    f    9    d    4
+	0000.0001.0010.0110.1111.1001.1101.0100
+
+8.b     6acdfa95
+	6    a    c    d    f    a    9    5
+	0110.1010.1100.1101.1111.1010.1001.0101
+
+8.c	f69bdc2a
+	f    6    9    b    d    c    2    a
+	1111.0110.1001.1011.1101.1100.0010.1010
+
+9.a     3ah = 3*16 + 10 = 58
+        
+9.b	1bfh = 1*16^2 + 11*16 + 15 = 447
+
+9.c	1001h = 1*16^3 + 1 = 4097
+
+
+10.a    62h = 6*16 + 2 = 98
+
+10.b    4b3h = 4*16^2 + 11*16 + 3 =  1203
+
+10.c    29fh = 2*16^2 + 9*16 + 15 = 671
+
+
+11.a	-24h     24h = 0000.0000.0010.0100 = 36d
+		-24h = 1111.1111.1101.1100 = -36d
+	
+11.b 	-331h	331h = 0000.0011.0011.0001 = 817d
+	       -331h = 1111.1100.1100.1111 = -817d
+
+12.a	-21h    21h = 0000.0000.0010.0001 = 33d
+	       -21h = 1111.1111.1101.1111 = -33d
+
+12.b	-45h    45h = 0000.0000.0100.0101 = 69d
+	       -45h = 1111.1111.1011.1011 = -69d
+
+13.a	6bf9h	6bf9h = 6*16^3 + 11*16^2 + 15*16 + 9 = 27641d
+			6*4096 + 11*256  + 15*16 + 9 = 27641d
+		
+13.b    c123h	c123h = 12*16^3 + 1*16^2 + 2*16 + 3 = 49443d
+
+14.a	4cd2h	4cd2h = 4*16^3 + 12*16^2 + 13*16^2 + 2 = 22786d
+
+14.b	8230h   8230h = 8*4096 + 2*256 + 3*16 + 0 = 33328d
+
+15.a    1011.0101b = 128 + 32 + 16 + 4 + 2 = 162d
+
+15.b	0010.1010b = 32 + 8 + 2 = 42d
+
+15.c	1111.0000b = 240 + 0 = 240d
+
+16.a	1000.0000b = 128d
+
+16.b    1100.1100b = 192 + 12 = 204d
+
+16.c 	1011.0111b = 176 + 7 = 183d
+
+
+17.a	-5d	5d = 0000.0101b
+	       -5d = 1111.1011b 	sword
+
+17.b	-42d	42d = 0010.1010b
+	       -42d = 1101.0110b
+
+17.c	-16d    16d = 0001.0000b
+	       -16d = 1111.0000b
+
+18.a	-72d    72d = 0100.1000b
+	       -72d = 1011.1000b
+
+19.b	-98d	98d = 0110.0010b
+	       -98d = 1001.1110b
+
+19.c	-26d	26d = 0001.1010b
+	       -26d = 1110.0110b
+
+20.a	7c4h
+       +3beh
+     =  b82h
+
+20.b	b69h
+       +7adh
+     = 1206h
+
+21.	B = 66d 42h
+
+22.     G = 71d 47h
+
+23.    129 bits 	2^129 - 1  = 
+
+24.	86 bits signed   2^(129-1) - 1
+
+25. 	A	B	A v B	not(A v B)
+	T	T	T	F
+	F	T	F	T
+	T	F	F	T
+	F	F	F	T
+
+
+26.	(notA OR notB)
+	
+	A	B	notA	notB	(notA OR notB)
+	T	T	F	F	F
+	F	T	T	F	T
+	T	F	F	T	T
+	F	F	T	T	T
+
+27.	4 inputs, 16 rows
+	The first column alternates every 1
+	The second column alternates every 2
+	The third column alternates every 4
+	The fourth column alternates every 8
+	The fifth column would alternate every 16, needing 32 rows
+	A	B	C	D
+1	T	T	T	T
+2	F	T	T	T
+3	T	F	T	T
+4	F	F	T	T
+5	T	T	F	T
+6	F	T	F	T
+7	T	F	F	T
+8	F	F	F	T
+9	T	T	T	F
+10	F	T	T	F
+11	T	F	T	F
+12	F	F	T	F
+13	T	T	F	F
+14	F	T	F	F
+15	T	F	F	F
+16	F	F	F	F
+
+
+
+28. 2 selectors bits are needed to control 4 inputs
+	  S1 S2 
+	1  T T
+	2  F T
+	3  T F
+	4  F F
+
+!.7.2 Algorithm Workbench
+
+
+
+
+1.7.2.1 
+<html>
+    <!-- kipirvine pg 30 1.7.2.1 -->
+    <!-- active at http://matrixcalculators.com/x86/index.html-->
+    <!-- https://github.com/matrixcalculators/matrixcalculators/blob/master/x86/html/binaryToDecimal.html -->
+    
+    <!-- This program accepts a binary string and 
+        displays the integer equivalent -->
+
+
+    <body>
+
+    <h2>Binary to integer</h2>
+    <form oninput="BToD(i1.value)">
+    <input type="text" size="20"
+         placeholder="Enter binary"
+         id="i1"></input>
+    <p id="display"</p>
+    </form>
+    </body>
+
+    <script>
+        function BToD(BArray)
+        {
+            var bit;
+            var integer = 0;
+            for (var i = 0; i < BArray.length;)
+            {
+                bit = BArray[BArray.length - 1 - i];
+                if (bit == 1) {
+                integer += Math.pow(2, i); }
+                document.getElementById("display").innerHTML = integer;
+                i++;
+            }
+        }
+    </script>
+</html>
+
+
+
+
+
+
+
+1.7.2.2
+<html><!-- kipirvine pg 30 1.7.2.2 -->
+    <!-- active at http://matrixcalculators.com/x86/index.html-->
+    <!-- https://github.com/matrixcalculators/matrixcalculators/blob/master/x86/html/hexadecimalToDecimal.html -->
+        
+        <!-- This program accepts a hexadecimal string and 
+            displays the integer equivalent -->
+    
+    
+        <body>
+    
+        <h2>Hexadecimal to integer</h2>
+        <form oninput="HToD(i1.value)">
+        <input type="text" size="20"
+             placeholder="Enter hexadecimal"
+             id="i1"></input>
+        <p id="display"</p>
+        </form>
+        </body>
+    
+        <script>
+    
+            function HToD(Array)
+            {
+                var byte;
+                var integer = 0;
+                var value;
+                for (var i = 0; i < Array.length;)
+                {
+                    byte = Array[Array.length - 1 - i];
+                    switch (byte) {
+                        case 'A' :
+                        case 'a' :
+                            value = 10;
+                            break;
+                        case 'B' :
+                        case 'b' :
+                            value = 11;
+                            break;
+                        case 'C' :
+                        case 'c' :
+                            value = 12;
+                            break;
+                        case 'D' :
+                        case 'd' :
+                            value = 13;
+                            break;
+                        case 'E' :
+                        case 'e' :
+                            value = 14;
+                            break;
+                        case 'F' :
+                        case 'f' :
+                            value = 15;
+                            break;
+                        default :
+                            value = byte;
+                    }
+                    
+                    integer +=  value * Math.pow(16, i); 
+                    document.getElementById("display").innerHTML = integer;
+                    i++;
+                }
+            }
+    
+        </script>
+    </html>
+
+
+1.7.2.3
+<html>
+    <!-- kipirvine pg 30 1.7.2.3 -->
+    <!-- active at http://matrixcalculators.com/x86/index.html-->
+    <!-- https://github.com/matrixcalculators/matrixcalculators/blob/master/x86/html/integerToBinary.html -->
+   
+    <!-- This program accepts an integer string and 
+        displays the binary equivalent -->
+
+
+    <body>
+
+    <h2>Integer to binary</h2>
+    <form oninput="IToB(i1.value)">
+    <input type="text" size="20"
+         placeholder="Enter integer"
+         id="i1"></input>
+    <p id="display"</p>
+    </form>
+    </body>
+
+    <script>
+        function IToB(integer)
+        {
+            var value;
+            var bString ="";
+            var binary = "";
+            quotent = integer;
+            while (quotent != 0) {
+            remainder = quotent % 2;
+            binary += remainder;
+            quotent = quotent / 2;
+            quotent = Math.floor(quotent);
+            }
+            for (var i = 0; binary.length > i;) {
+                bString += binary[binary.length -1 - i];
+                i++;
+            }
+            
+            document.getElementById("display").innerHTML = bString;
+            }
+    
+    </script>
+</html>
+
+<html>
+    <!-- kipirvine pg 30 1.7.2.4 -->
+    <!-- active at http://matrixcalculators.com/x86/index.html-->
+    <!-- https://github.com/matrixcalculators/matrixcalculators/blob/master/x86/html/integerToHexadecimal.html -->
+   
+    <!-- This program accepts an integer string and 
+        displays the Hexadecimal equivalent
+
+        
+        functions
+        1. IToH(int) ; accepts integer string, displays hex string
+        2. IntegerToHex(int) ; accepts integer character, returns hex
+        3. reverseString(string) ; accepts string, returns reverse
+
+    -->
+
+
+    <body>
+
+    <h2>Integer to Hexadecimal</h2>
+    <form oninput="IToH(i1.value)">
+    <input type="text" size="20"
+         placeholder="Enter integer"
+         id="i1"></input>
+    <p id="display"</p>
+    </form>
+    </body>
+
+    <script>
+        // 1
+        // accepts integer, returns hexadecimal
+        function IToH(integer) { console.log("IToH recieved: " + integer);
+            var HexString = "";
+            var remainder;
+            var quotient = integer;
+            while (quotient != 0) {
+                remainder = quotient % 16;
+                quotient = quotient / 16;
+                quotient = Math.floor(quotient);
+                var remainderHex = IntToHex(remainder);
+                HexString += remainderHex;
+
+            }
+            HexString = reverseString(HexString);
+            if (HexString != ''){HexString += 'h';}
+            document.getElementById("display").innerHTML = HexString;
+            console.log("IToH displayed: " + HexString);
+        }
+    
+        // 2
+        // accepts integer unit(1-15), returns hexadecimal equivalent as string
+        function IntToHex(integer) { console.log("IntToHex accepted: " + integer)
+            var hex = "";
+            switch(integer) {
+                case 10 :
+                    hex = 'a';
+                    break;
+                case 11:
+                    hex = 'b';
+                    break;
+                case 12:
+                    hex = 'c';
+                    break;
+                case 13:
+                    hex = 'd';
+                    break;
+                case 14:
+                    hex = 'e';
+                    break;
+                case 15:
+                    hex = 'f';
+                    break;
+                default:
+                    hex = integer;
+            }
+            return hex; console.log("IntToHex returned: " + hex);
+                
+            
+        }
+
+        // 3
+        // accepts string, returns reversed string
+        function reverseString(string) {
+            console.log("reverseString accepted: " + string);
+            var newString = "";
+            var oldString = string;
+            for (var i = 0; i < oldString.length;) {
+                newString += oldString[oldString.length -1 - i];
+                i++;
+            }
+            console.log("reverseString returning: " + newString);
+            return newString;
+        }
+    </script>
+</html>
+
+
+
+
+
+
+
+
+// 1.7.2.8
+// this program calculates 
+// x = (y + 4) * 3
+
+import java.util.Scanner;
+
+public class addxy
+{
+	public static void main(String[] args)
+	{
+		// declare control variable
+		int x, y = 2;
+		
+		// add and store in x
+		x = (y + 4) * 3;
+		
+
+		
+
+	}
+}
+
+
+Compiled from "addxy.java"
+public class addxy {
+  public addxy();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void main(java.lang.String[]);
+    Code:
+       0: iconst_2 ; initializes second constant y
+       1: istore_2 ; stores 2 in y
+       2: iload_2 ; replaces y with 2
+       3: iconst_4 ; loads constant (4)
+       4: iadd     ; adds 4 to 2
+       5: iconst_3 ; loads 3
+       6: imul      ; multiplies 6 times 3
+       7: istore_1  ; stores result in x
+       8: return    ; returns from main function
+}
+
+
