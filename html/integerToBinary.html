@@ -1,0 +1,46 @@
+<html>
+    <!-- kipirvine pg 30 1.7.2.3 -->
+    <!-- active at http://matrixcalculators.com/x86/index.html-->
+    <!-- https://github.com/matrixcalculators/matrixcalculators/blob/master/x86/html/integerToBinary.html -->
+   
+    <!-- This program accepts an integer string and 
+        displays the binary equivalent -->
+
+
+    <body>
+
+    <h2>Integer to binary</h2>
+    <form oninput="IToB(i1.value)">
+    <input type="text" size="20"
+         placeholder="Enter integer"
+         id="i1"></input>
+    <p id="display"</p>
+    </form>
+    </body>
+
+    <script>
+
+        function IToB(integer)
+        {
+            var value;
+            var bString ="";
+            var binary = "";
+            quotent = integer;
+            while (quotent != 0) {
+            remainder = quotent % 2;
+            binary += remainder;
+            quotent = quotent / 2;
+            quotent = Math.floor(quotent);
+            }
+            for (var i = 0; binary.length > i;) {
+                bString += binary[binary.length -1 - i];
+                i++;
+            }
+            
+            document.getElementById("display").innerHTML = bString;
+
+            }
+    
+
+    </script>
+</html>

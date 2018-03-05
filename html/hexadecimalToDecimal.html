@@ -1,0 +1,66 @@
+<html><!-- kipirvine pg 30 1.7.2.2 -->
+    <!-- active at http://matrixcalculators.com/x86/index.html-->
+    <!-- https://github.com/matrixcalculators/matrixcalculators/blob/master/x86/html/hexadecimalToDecimal.html -->
+        
+        <!-- This program accepts a hexadecimal string and 
+            displays the integer equivalent -->
+    
+    
+        <body>
+    
+        <h2>Hexadecimal to integer</h2>
+        <form oninput="HToD(i1.value)">
+        <input type="text" size="20"
+             placeholder="Enter hexadecimal"
+             id="i1"></input>
+        <p id="display"</p>
+        </form>
+        </body>
+    
+        <script>
+    
+            function HToD(Array)
+            {
+                var byte;
+                var integer = 0;
+                var value;
+                for (var i = 0; i < Array.length;)
+                {
+                    byte = Array[Array.length - 1 - i];
+                    switch (byte) {
+                        case 'A' :
+                        case 'a' :
+                            value = 10;
+                            break;
+                        case 'B' :
+                        case 'b' :
+                            value = 11;
+                            break;
+                        case 'C' :
+                        case 'c' :
+                            value = 12;
+                            break;
+                        case 'D' :
+                        case 'd' :
+                            value = 13;
+                            break;
+                        case 'E' :
+                        case 'e' :
+                            value = 14;
+                            break;
+                        case 'F' :
+                        case 'f' :
+                            value = 15;
+                            break;
+                        default :
+                            value = byte;
+                    }
+                    
+                    integer +=  value * Math.pow(16, i); 
+                    document.getElementById("display").innerHTML = integer;
+                    i++;
+                }
+            }
+    
+        </script>
+    </html>

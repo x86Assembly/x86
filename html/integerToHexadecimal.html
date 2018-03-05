@@ -1,0 +1,84 @@
+<html>
+    <!-- kipirvine pg 30 1.7.2.4 -->
+    <!-- active at http://matrixcalculators.com/x86/index.html-->
+    <!-- https://github.com/matrixcalculators/matrixcalculators/blob/master/x86/html/integerToHexadecimal.html -->
+   
+    <!-- This program accepts an integer string and 
+        displays the Hexadecimal equivalent -->
+
+
+    <body>
+
+    <h2>Integer to Hexadecimal</h2>
+    <form oninput="IToH(i1.value)">
+    <input type="text" size="20"
+         placeholder="Enter integer"
+         id="i1"></input>
+    <p id="display"</p>
+    </form>
+    </body>
+
+    <script>
+        // accepts integer, returns hexadecimal
+        function IToH(integer)
+        {
+            var HexString = "";
+            var remainder;
+            var quotient = integer;
+            while (quotient != 0) {
+                remainder = quotient % 16;
+                quotient = quotient / 16;
+                quotient = Math.floor(quotient);
+                var remainderHex = IntToHex(remainder);
+                HexString += remainderHex;
+
+            }
+           HexString = reverseString(HexString);
+            document.getElementById("display").innerHTML = HexString;
+            }
+    
+        // accepts integer unit(1-15), returns hexadecimal equivalent
+        function IntToHex(integer) {
+            var hex = "";
+            switch(integer) {
+                case 10 :
+                    hex = 'a';
+                    break;
+                case 11:
+                    hex = 'b';
+                    break;
+                case 12:
+                    hex = 'c';
+                    break;
+                case 13:
+                    hex = 'd';
+                    break;
+                case 14:
+                    hex = 'e';
+                    break;
+                case 15:
+                    hex = 'f';
+                    break;
+                default:
+                    hex = integer;
+            }
+            console.log("from IntToHex, returning: " + hex);
+            return hex;
+                
+            
+        }
+
+        // accepts string, returns reversed string
+        function reverseString(string) {
+
+            var newString = "";
+            var oldString = string;
+            for (var i = 0; i < oldString.length;) {
+                newString += oldString[oldString.length -1 - i];
+                i++;
+            }
+            if (newString != ''){newString += 'h';}
+            return newString;
+        }
+    </script>
+</html>

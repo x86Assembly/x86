@@ -1,0 +1,36 @@
+<html>
+    <!-- kipirvine pg 30 1.7.2.1 -->
+    <!-- active at http://matrixcalculators.com/x86/index.html-->
+    <!-- https://github.com/matrixcalculators/matrixcalculators/blob/master/x86/html/binaryToDecimal.html -->
+    
+    <!-- This program accepts a binary string and 
+        displays the integer equivalent -->
+
+
+    <body>
+
+    <h2>Binary to integer</h2>
+    <form oninput="BToD(i1.value)">
+    <input type="text" size="20"
+         placeholder="Enter binary"
+         id="i1"></input>
+    <p id="display"</p>
+    </form>
+    </body>
+
+    <script>
+        function BToD(BArray)
+        {
+            var bit;
+            var integer = 0;
+            for (var i = 0; i < BArray.length;)
+            {
+                bit = BArray[BArray.length - 1 - i];
+                if (bit == 1) {
+                integer += Math.pow(2, i); }
+                document.getElementById("display").innerHTML = integer;
+                i++;
+            }
+        }
+    </script>
+</html>
