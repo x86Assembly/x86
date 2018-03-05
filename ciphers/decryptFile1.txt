@@ -1,0 +1,109 @@
+; decrypt
+; This program decrypt a file and displays it in the
+; console window
+; when entering filename, include file type, such as, data.txt
+
+; 1. displayPurpose
+; 2. getFilename, returns filename in edx
+; 3. getKey, returns key in ebx
+; 3. decryptfile, 
+; 4. displayEncyptedData
+; 6. reset buffer
+include Irvine32.inc
+
+.data
+encryptedBuffer byte 10000 dup(?)
+decryptedBuffer byte 10000 dup(?)
+buffer byte "hello", 0 dup(?)
+bufsize = lengthof buffer
+key byte 21 dup(?)
+filename byte 21 dup(?)
+filehandle dword ?
+.code
+main proc
+	call displayPurpose
+	l1:
+	call getFilename
+	call getKey
+	call decryptfile
+	call displayEncryptedData
+	call crlf
+	call crlf
+	call resetBuffer
+	jmp l1
+	exit
+main ENDP
+
+; 1
+displayPurpose proc
+	.data
+	disp byte 10, "This program decrypts a given file using a key.", 10, 13,
+				  "The decrypted data is displayed in the console window and is not saved.", 10, 13,
+				  "Use the accompaning program(EncryptToFile.exe) to create an encrypted file.", 10, 13, 0
+	.code
+	mov edx, offset disp
+	call writeString
+	call crlf
+	ret
+displayPurpose ENdP
+
+; 2
+getFilename proc
+	.data
+	prompt1 byte "Enter name of encrypted file: ", 0
+	.code
+	mov edx, offset prompt1
+	call writeString
+	mov edx, offset filename
+	mov ecx, sizeof filename
+	call readString
+	ret
+getFilename ENDP
+
+;3
+getKey proc
+	.data
+	prompt2 byte "Enter key(1-255): ", 0
+	.code
+	mov edx, offset prompt2
+	call writeString
+	call readDec
+	mov key, al
+	ret
+getKey ENDP
+
+; 41
+decryptFile proc
+	mov edx, offset filename
+	call openInputFile
+	mov filehandle, eax
+	mov edx, offset encryptedBuffer
+	mov ecx, lengthof encryptedBuffer
+	call readfromFile
+	mov esi, 0
+	mov ecx, eax ; length read
+	mov al, key
+l1:	xor encryptedBuffer[esi], al
+	inc esi
+	loop l1
+	mov eax, filehandle
+	call closefile
+	
+decryptFile ENDP
+
+; 5
+displayEncryptedData proc
+	mov edx, offset encryptedBuffer
+	mov ecx, lengthof encryptedBuffer
+	call writeString
+	ret
+displayEncryptedData ENDP
+
+resetBuffer proc
+	mov ecx, lengthof encryptedBuffer
+	mov esi, 0
+L1: mov encryptedBuffer[esi], 0
+	inc esi
+	loop l1
+	ret
+resetBuffer ENDP
