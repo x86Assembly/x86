@@ -31,7 +31,7 @@ include Irvine32.inc
 .code
 main proc
 	call displaypurpose
-l1: call getuserinput
+l1:     call getuserinput
 	call calculatedata
 	call displayoutput
 	jmp l1
