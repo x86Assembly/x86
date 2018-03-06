@@ -1,7 +1,5 @@
 Chapter 1 pg 28 -30
 
-<!-- https://github.com/matrixcalculators/matrixcalculators/blob/master/x86/ChaptersReviewAssignments/Chapter1 -->
-
 1. 	The left most bit is the MSB
 
 
@@ -221,7 +219,7 @@ Chapter 1 pg 28 -30
 <html>
     <!-- kipirvine pg 30 1.7.2.1 -->
     <!-- active at http://matrixcalculators.com/x86/index.html-->
-    <!-- https://github.com/matrixcalculators/matrixcalculators/blob/master/x86/html/binaryToDecimal.html -->
+
     
     <!-- This program accepts a binary string and 
         displays the integer equivalent -->
@@ -378,7 +376,7 @@ Chapter 1 pg 28 -30
 <html>
     <!-- kipirvine pg 30 1.7.2.4 -->
     <!-- active at http://matrixcalculators.com/x86/index.html-->
-    <!-- https://github.com/matrixcalculators/matrixcalculators/blob/master/x86/html/integerToHexadecimal.html -->
+  
    
     <!-- This program accepts an integer string and 
         displays the Hexadecimal equivalent
@@ -462,7 +460,11 @@ Chapter 1 pg 28 -30
             var newString = "";
             var oldString = string;
             for (var i = 0; i < oldString.length;) {
-                newString += oldString[oldString.length -1 - i];
+
+
+
+
+newString += oldString[oldString.length -1 - i];
                 i++;
             }
             console.log("reverseString returning: " + newString);
@@ -511,15 +513,15 @@ public class addxy {
 
   public static void main(java.lang.String[]);
     Code:
-       0: iconst_2 ; initializes second constant y
-       1: istore_2 ; stores 2 in y
-       2: iload_2 ; replaces y with 2
-       3: iconst_4 ; loads constant (4)
-       4: iadd     ; adds 4 to 2
-       5: iconst_3 ; loads 3
-       6: imul      ; multiplies 6 times 3
-       7: istore_1  ; stores result in x
-       8: return    ; returns from main function
+       0: iconst_2 
+       1: istore_2 
+       2: iload_2 
+       3: iconst_4 
+       4: iadd   
+       5: iconst_3
+       6: imul     
+       7: istore_1 
+       8: return   
 }
 
 
