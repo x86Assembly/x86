@@ -14,7 +14,7 @@
 
 ; 1. displayPurpose
 ; 2. getab			; ret: eax=val1 ebx=val2
-; 3. bitwiseMultply ; rec: eax=val1 ebx=val2
+; 3. bitwiseMultply             ; rec: eax=val1 ebx=val2
 ; 4. displayResult
 
 
@@ -25,7 +25,7 @@ include Irvine32.inc
 	main proc
 	
 		call displayPurpose
-	l1: call getab
+	l1:     call getab
 		call bitwiseMultiply
 		call displayResult
 		jmp l1
@@ -38,6 +38,7 @@ include Irvine32.inc
 
 
 ; 1
+
 
 
 
@@ -58,6 +59,8 @@ displayPurpose proc
 
 ret
 displayPurpose endp
+
+
 
 
 
@@ -120,7 +123,7 @@ bitwiseMultiply proc
 	je zero
 	cmp ebx, 0
 	je zero
-
+  
 
 
 
@@ -148,7 +151,7 @@ shift:
 	
 ext:
 
-add eax, edi
+add eax, edi           ; add one more original eax it the lsb was set
 jmp extn
 
 zero:			; if either value is zero
