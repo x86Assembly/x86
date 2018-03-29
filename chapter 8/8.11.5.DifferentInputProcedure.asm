@@ -1,7 +1,7 @@
 ; 8.11.5.DifferentInputsProcedure
 
 
-; This program compares three values enter by the user
+; This program compares three values entered by the user
 ; and display whether they are the same
 
 include irvine32.inc
