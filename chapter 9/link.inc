@@ -1,4 +1,4 @@
-INCLUDE Irvine32.inc			; Last update: 4.3.2018
+resetString proto ptrString:ptr byteINCLUDE Irvine32.inc			; Last update: 4.3.2018
 ; This file declares prototypes of procedures defined in x86lib.asm
 ; INCLUDE link.inc
 ; import x86lib.asm to solution explorer
@@ -35,3 +35,4 @@ str_lcase proto ptrString:ptr byte
 display2DElementDword proto ptrtable:ptr dword, rowsize:dword, rowindex:dword, colindex:dword
 str_copyN proto ptrsource:ptr dword, ptrtarget:ptr dword, limit:dword
 str_concat proto ptrtarget:ptr dword, ptrsource:ptr dword
+resetString proto ptrString:ptr byte
