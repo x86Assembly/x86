@@ -1174,6 +1174,23 @@ str_concat endp
 
 	
 
+; 35
+
+
+resetString proc	ptrstrinn:ptr byte
+pushad
+		invoke str_length, ptrstrinn
+		mov ecx, eax
+		mov eax, 0
+		mov edi, ptrstrinn
+		cld
+		rep stosb
+ret
+popad
+resetString endp 
+
+
+
 
 
 
