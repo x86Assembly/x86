@@ -1,4 +1,4 @@
-INCLUDE link.inc				; Last update: 4.3.2018
+; INCLUDE link.inc				; Last update: 4.3.2018
 include macros.inc
 
 ; All source code starting with chapter 9 must include link.inc
@@ -30,7 +30,7 @@ include macros.inc
 
 
 
-
+; Most of these procedures accept pointers
 ; Procedures defined
 
 ; 1. displayString
