@@ -1,5 +1,7 @@
 INCLUDE Irvine32.inc			; Last update: 4.3.2018
-
+; This file declares prototypes of procedures defined in x86lib.asm
+; INCLUDE link.inc
+; import x86lib.asm to solution explorer
 
 
 getArray proto ptrarray:ptr dword,   leng:dword
