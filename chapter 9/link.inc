@@ -1,4 +1,7 @@
 INCLUDE Irvine32.inc			; Last updated: 4.3.2018
+; This file declares prototypes for procedures defined in x86lib.asm
+; add x86lib.asm to project solution explorer
+; add INCLUDE link.inc to main asm files
 
 
 
