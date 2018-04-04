@@ -1,4 +1,4 @@
-; 9.10.6.FrequencyTable
+; 9.10.7.SieveOfEratosthenese
 include link.inc
 include macros.inc
 
