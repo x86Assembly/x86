@@ -1,4 +1,4 @@
-INCLUDE link.inc				; Last updated: 4.3.2018
+INCLUDE link.inc				; Last updated: 4.5.2018
 include macros.inc
 
 ; All source code starting with chapter 9 must include link.inc
@@ -49,12 +49,12 @@ include macros.inc
 ; 14. writesquare
 ; 15. drawcheckers
 ; 16. loadFile
-; 17. asciiMatrix		currently not functional
+; 17. asciiMatrix   currently not functional
 ; 18. randomArray
 ; 19. randomchar
 ; 20. goto00
 ; 21. bubbleSort
-; 22. binarySearch		  currently not functional
+; 22. binarySearch		 
 ; 23. rollingtext
 ; 24. displayAsciiLine
 ; 25. rollingTextBackwards
@@ -86,7 +86,7 @@ include macros.inc
 ; 51. randomCharArrayVowelProbability
 ; 52. randomCharVowel
 ; 53. randomCapitalConsonant
-; 54. displayAsciiMatrix1
+; 54. displayAsciiMatrix
 
 .code
 
